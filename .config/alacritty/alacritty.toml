@@ -1,0 +1,7 @@
+[window]
+padding.x=10
+padding.y=10
+
+startup_mode="Fullscreen"
+opacity=0.5
+blur=true
