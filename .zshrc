@@ -5,6 +5,7 @@
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ./linuxtoolbox/F-Sy-H/F-Sy-H.plugin.zsh
 
+export PATH=/home/rik/.cargo/bin:$PATH
 
 
 

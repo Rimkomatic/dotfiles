@@ -18,7 +18,7 @@ window#waybar {
 .modules-center,
 .modules-right
 {
-    background: rgba(0, 0, 8, .7);
+    background: rgba(30, 30, 30, .7);
     margin: 5px 10px;
     padding: 0 5px;
     border-radius: 20px;
@@ -81,7 +81,7 @@ window#waybar {
     feather;
   font-weight: 900;
   font-size: 13pt;
-  color: #c0caf5;
+  color: #f0f0f0;
   border:none;
   border-radius: 50px;
 }
