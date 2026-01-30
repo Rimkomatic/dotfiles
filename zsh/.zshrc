@@ -129,6 +129,10 @@ function y() {
   rm -f -- "$tmp"
 }
 
+# EDIT Command
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^x^e" edit-command-line
 
 # The Fuck 
 eval $(thefuck --alias)

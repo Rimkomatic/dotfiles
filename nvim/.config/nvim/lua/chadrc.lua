@@ -1,12 +1,12 @@
 local options = {
 
 	base46 = {
-		theme = "aylin", -- default theme
+		theme = "rosepine", -- default theme
 		hl_add = {},
 		hl_override = {},
 		integrations = {},
 		changed_themes = {},
-		transparency = false,
+		transparency = true,
 		theme_toggle = { "hiberbee", "onedark", "one_light" },
 	},
 
