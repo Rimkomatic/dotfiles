@@ -109,6 +109,7 @@ spawn-at-startup "noctalia-shell"
 // spawn-at-startup "pgrep -x wl-paste || wl-paste --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-at-startup "pkill mako"
 
 hotkey-overlay {
     skip-at-startup
