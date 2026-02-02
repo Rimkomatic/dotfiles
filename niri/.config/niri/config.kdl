@@ -41,6 +41,7 @@ input {
     }
 }
 
+
 output "HDMI-A-2" {
     mode "1920x1080@100"
     scale 1.0
@@ -109,7 +110,6 @@ spawn-at-startup "noctalia-shell"
 // spawn-at-startup "pgrep -x wl-paste || wl-paste --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
-spawn-at-startup "pkill mako"
 
 hotkey-overlay {
     skip-at-startup
@@ -408,6 +408,7 @@ layer-rule {
   place-within-backdrop true
 }
 
+spawn-at-startup "pkill mako"
 
 include "./noctalia.kdl"
 

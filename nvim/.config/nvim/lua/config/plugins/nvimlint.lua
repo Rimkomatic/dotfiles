@@ -7,7 +7,7 @@ return {
       javascript = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       lua = { "luacheck" },
-      go = { "golangci_lint" },
+      go = { "golangci-lint" },
     }
 
     -- Automatically lint on save
