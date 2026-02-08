@@ -554,7 +554,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/rik/Pictures/Wallpapers",
+        "directory": "/home/rik/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
@@ -574,7 +574,7 @@
         "transitionType": "disc",
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "browse",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
