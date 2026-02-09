@@ -554,7 +554,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/rik/Wallpapers",
+        "directory": "/home/rik/Wallpapers_turine",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
