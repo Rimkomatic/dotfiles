@@ -1,0 +1,39 @@
+[config]
+
+[templates.gtk_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/gtk.css"
+output_path = "/home/rik/.config/gtk-3.0/noctalia.css"
+post_hook = "python3 /etc/xdg/quickshell/noctalia-shell/Scripts/python/src/theming/gtk-refresh.py dark"
+
+[templates.gtk_1]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/gtk.css"
+output_path = "/home/rik/.config/gtk-4.0/noctalia.css"
+post_hook = "python3 /etc/xdg/quickshell/noctalia-shell/Scripts/python/src/theming/gtk-refresh.py dark"
+
+[templates.qt_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/qtct.conf"
+output_path = "/home/rik/.config/qt5ct/colors/noctalia.conf"
+
+[templates.qt_1]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/qtct.conf"
+output_path = "/home/rik/.config/qt6ct/colors/noctalia.conf"
+
+[templates.kcolorscheme_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/kcolorscheme.colors"
+output_path = "/home/rik/.local/share/color-schemes/noctalia.colors"
+post_hook = "if command -v plasma-apply-colorscheme >/dev/null 2>&1; then plasma-apply-colorscheme BreezeDark; sleep 0.5; plasma-apply-colorscheme noctalia; fi"
+
+[templates.telegram_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/telegram.tdesktop-theme"
+output_path = "/home/rik/.config/telegram-desktop/themes/noctalia.tdesktop-theme"
+
+[templates.niri_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/niri.kdl"
+output_path = "/home/rik/.config/niri/noctalia.kdl"
+post_hook = "/etc/xdg/quickshell/noctalia-shell/Scripts/bash/template-apply.sh niri"
+
+[templates.hyprland_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/hyprland.conf"
+output_path = "/home/rik/.config/hypr/noctalia/noctalia-colors.conf"
+post_hook = "/etc/xdg/quickshell/noctalia-shell/Scripts/bash/template-apply.sh hyprland"
+

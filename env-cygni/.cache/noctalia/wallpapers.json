@@ -1,0 +1,6 @@
+{
+    "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
+    "wallpapers": {
+        "eDP-1": "/home/rik/Walpapers/space.png"
+    }
+}
