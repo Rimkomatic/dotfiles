@@ -1,0 +1,44 @@
+[config]
+
+[templates.gtk_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/gtk.css"
+output_path = "/home/rik/.config/gtk-3.0/noctalia.css"
+post_hook = "python3 /etc/xdg/quickshell/noctalia-shell/Scripts/python/src/theming/gtk-refresh.py dark"
+
+[templates.gtk_1]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/gtk.css"
+output_path = "/home/rik/.config/gtk-4.0/noctalia.css"
+post_hook = "python3 /etc/xdg/quickshell/noctalia-shell/Scripts/python/src/theming/gtk-refresh.py dark"
+
+[templates.qt_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/qtct.conf"
+output_path = "/home/rik/.config/qt5ct/colors/noctalia.conf"
+
+[templates.qt_1]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/qtct.conf"
+output_path = "/home/rik/.config/qt6ct/colors/noctalia.conf"
+
+[templates.telegram_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/telegram.tdesktop-theme"
+output_path = "/home/rik/.config/telegram-desktop/themes/noctalia.tdesktop-theme"
+
+[templates.zenBrowser_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/zen-browser/zen-userChrome.css"
+output_path = "/home/rik/.cache/noctalia/zen-browser/zen-userChrome.css"
+post_hook = "sh -c 'CSS_CHROME=\"$HOME/.cache/noctalia/zen-browser/zen-userChrome.css\"; CSS_CONTENT=\"$HOME/.cache/noctalia/zen-browser/zen-userContent.css\"; LINE_CHROME=\"@import \\\"$CSS_CHROME\\\";\"; LINE_CONTENT=\"@import \\\"$CSS_CONTENT\\\";\"; find \"$HOME/.zen\" -mindepth 2 -maxdepth 2 -type d -name chrome -print0 | while IFS= read -r -d \"\" dir; do USER_CHROME=\"$dir/userChrome.css\"; USER_CONTENT=\"$dir/userContent.css\"; mkdir -p \"$dir\"; touch \"$USER_CHROME\" \"$USER_CONTENT\"; sed -i \"/zen-browser\\/zen-userChrome\\.css/d\" \"$USER_CHROME\"; sed -i \"/zen-browser\\/zen-userContent\\.css/d\" \"$USER_CONTENT\"; if ! grep -Fq \"$LINE_CHROME\" \"$USER_CHROME\"; then printf \"%s\\n\" \"$LINE_CHROME\" >> \"$USER_CHROME\"; fi; if ! grep -Fq \"$LINE_CONTENT\" \"$USER_CONTENT\"; then printf \"%s\\n\" \"$LINE_CONTENT\" >> \"$USER_CONTENT\"; fi; done'"
+
+[templates.zenBrowser_1]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/zen-browser/zen-userContent.css"
+output_path = "/home/rik/.cache/noctalia/zen-browser/zen-userContent.css"
+post_hook = "sh -c 'CSS_CHROME=\"$HOME/.cache/noctalia/zen-browser/zen-userChrome.css\"; CSS_CONTENT=\"$HOME/.cache/noctalia/zen-browser/zen-userContent.css\"; LINE_CHROME=\"@import \\\"$CSS_CHROME\\\";\"; LINE_CONTENT=\"@import \\\"$CSS_CONTENT\\\";\"; find \"$HOME/.zen\" -mindepth 2 -maxdepth 2 -type d -name chrome -print0 | while IFS= read -r -d \"\" dir; do USER_CHROME=\"$dir/userChrome.css\"; USER_CONTENT=\"$dir/userContent.css\"; mkdir -p \"$dir\"; touch \"$USER_CHROME\" \"$USER_CONTENT\"; sed -i \"/zen-browser\\/zen-userChrome\\.css/d\" \"$USER_CHROME\"; sed -i \"/zen-browser\\/zen-userContent\\.css/d\" \"$USER_CONTENT\"; if ! grep -Fq \"$LINE_CHROME\" \"$USER_CHROME\"; then printf \"%s\\n\" \"$LINE_CHROME\" >> \"$USER_CHROME\"; fi; if ! grep -Fq \"$LINE_CONTENT\" \"$USER_CONTENT\"; then printf \"%s\\n\" \"$LINE_CONTENT\" >> \"$USER_CONTENT\"; fi; done'"
+
+[templates.yazi_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/yazi.toml"
+output_path = "/home/rik/.config/yazi/flavors/noctalia.yazi/flavor.toml"
+post_hook = "/etc/xdg/quickshell/noctalia-shell/Scripts/bash/template-apply.sh yazi"
+
+[templates.niri_0]
+input_path = "/etc/xdg/quickshell/noctalia-shell/Assets/Templates/niri.kdl"
+output_path = "/home/rik/.config/niri/noctalia.kdl"
+post_hook = "/etc/xdg/quickshell/noctalia-shell/Scripts/bash/template-apply.sh niri"
+
