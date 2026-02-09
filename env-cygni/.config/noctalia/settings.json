@@ -534,7 +534,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/rik/Walpapers",
+        "directory": "~/Walpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
