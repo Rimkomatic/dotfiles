@@ -25,7 +25,7 @@ config.font = wezterm.font_with_fallback({
   "Fira Code",
   "Monaco",
 })
-config.font_size = 12
+config.font_size = 14
 config.colors = {
   cursor_fg = "black",
 }
