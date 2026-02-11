@@ -61,6 +61,11 @@
             "tier": "supporter"
         },
         {
+            "github_username": "globadyne",
+            "name": "iownyrface",
+            "tier": "supporter"
+        },
+        {
             "github_username": "JustCurtis",
             "name": "JustCurtis",
             "tier": "supporter"
@@ -146,5 +151,5 @@
             "tier": "supporter"
         }
     ],
-    "timestamp": 1770667361
+    "timestamp": 1770793710
 }

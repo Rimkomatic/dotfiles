@@ -1,13 +1,13 @@
 * {
-  --base:           #120d0e;
-  --surface:        #201a1c;
-  --overlay:        #241e20;
-  --muted:          #2f282a;
-  --subtle:         #3a3335;
-  --text:           #ebe0e1;
-  --secondary:      #e2bdc7;
-  --primary:        #ffb0ca;
-  --on_primary:      #5d1135;
+  --base:           #0d0e11;
+  --surface:        #1a1c1e;
+  --overlay:        #1e2023;
+  --muted:          #292a2d;
+  --subtle:         #343538;
+  --text:           #e3e2e6;
+  --secondary:      #bdc7dc;
+  --primary:        #a7c8ff;
+  --on_primary:      #003061;
 }
 
 :root {
