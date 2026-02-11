@@ -6,11 +6,11 @@
         "current_weather": {
             "interval": 900,
             "is_day": 0,
-            "temperature": 6.2,
-            "time": "2026-02-11T19:15",
-            "weathercode": 2,
-            "winddirection": 344,
-            "windspeed": 5.2
+            "temperature": 6.3,
+            "time": "2026-02-11T19:45",
+            "weathercode": 1,
+            "winddirection": 341,
+            "windspeed": 6.5
         },
         "current_weather_units": {
             "interval": "seconds",
@@ -86,12 +86,12 @@
             "weathercode": "wmo code"
         },
         "elevation": 26,
-        "generationtime_ms": 0.16868114471435547,
+        "generationtime_ms": 0.2225637435913086,
         "latitude": 35.7,
         "longitude": 139.6875,
         "timezone": "Asia/Tokyo",
         "timezone_abbreviation": "GMT+9",
         "utc_offset_seconds": 32400
     },
-    "weatherLastFetch": 1770805172
+    "weatherLastFetch": 1770807061
 }
