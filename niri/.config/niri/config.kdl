@@ -105,7 +105,7 @@ layout {
 }
 
 // spawn-at-startup "waybar"
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "sh -c 'until systemctl --user is-active graphical-session.target >/dev/null 2>&1; do sleep 0.2; done; noctalia-shell'"
 // spawn-at-startup "wl-paste --watch cliphist store"
 // spawn-at-startup "pgrep -x wl-paste || wl-paste --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
