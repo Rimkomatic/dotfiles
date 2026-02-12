@@ -53,7 +53,7 @@ output "HDMI-A-2" {
 
 output "eDP-1" {
     mode "1920x1080@60.001"
-    scale 1.08
+    scale 1
     // backdrop-color "#000"
     transform "normal"
     position x=1280 y=0
@@ -105,7 +105,7 @@ layout {
 }
 
 // spawn-at-startup "waybar"
-spawn-at-startup "sh -c 'until systemctl --user is-active graphical-session.target >/dev/null 2>&1; do sleep 0.2; done; noctalia-shell'"
+spawn-at-startup "sh" "-c" "noctalia-shell"
 // spawn-at-startup "wl-paste --watch cliphist store"
 // spawn-at-startup "pgrep -x wl-paste || wl-paste --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
