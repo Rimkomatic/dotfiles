@@ -187,31 +187,6 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
-                },
-                {
-                    "defaultSettings": {
-                        "rotationInterval": 5000,
-                        "showDate": true,
-                        "timeFormat": "HH:mm",
-                        "timezones": [
-                            {
-                                "enabled": true,
-                                "name": "New York",
-                                "timezone": "America/New_York"
-                            },
-                            {
-                                "enabled": true,
-                                "name": "London",
-                                "timezone": "Europe/London"
-                            },
-                            {
-                                "enabled": true,
-                                "name": "Tokyo",
-                                "timezone": "Asia/Tokyo"
-                            }
-                        ]
-                    },
-                    "id": "plugin:world-clock"
                 }
             ]
         }
