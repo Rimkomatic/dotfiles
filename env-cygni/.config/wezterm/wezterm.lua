@@ -19,16 +19,27 @@ config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_rate = 0
-config.color_scheme = "Argonaut"
+
+
+config.color_scheme_dirs = {
+  wezterm.config_dir .. "/colors"
+}
+
+-- config.color_scheme = "Argonaut"
+-- config.color_scheme = 'Scarlet Protocol'
+-- config.color_scheme = 'Sea Shells (Gogh)'
+-- config.color_scheme = 'Sequoia Moonlight'
+-- config.color_scheme = "Noctalia"
+config.color_scheme = 'custom'
 config.font = wezterm.font_with_fallback({
   "JetBrainsMono Nerd Font",
   "Fira Code",
   "Monaco",
 })
-config.font_size = 14
-config.colors = {
-  cursor_fg = "black",
-}
+config.font_size = 12
+-- config.colors = {
+--   cursor_fg = "black",
+-- }
 
 -- config.keys = {
 --   {
