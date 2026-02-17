@@ -16,7 +16,7 @@ return {
 				---@type integer
 				max_height = -1, -- -1 means dynamic height
 				---@type "topleft"|"bottomleft"|"topright"|"bottomright"|"center"|"cursor"
-				position = "cursor",
+				position = "center",
 				---@type vim.api.keyset.win_config
 				open_win_override = {
 					title = "Open Buffers",
