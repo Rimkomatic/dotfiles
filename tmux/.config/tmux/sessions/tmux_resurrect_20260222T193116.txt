@@ -1,9 +1,0 @@
-pane	0	1	0	:	1	:/home/rik/dotfiles/tmux/.config/tmux/sessions	1	zsh	2405316	:
-pane	0	2	0	:	1	turine	:/home/rik/dotfiles/tmux/.config/tmux/sessions	1	zsh	:
-pane	0	3	0	:-	1	turine	:/home/rik/dotfiles/tmux/.config/tmux/sessions	1	zsh	:
-pane	0	4	1	:*	1	turine	:/home/rik/dotfiles/tmux/.config/tmux/sessions	1	zsh	:
-window	0	1	:zsh	0	:	c8bd,190x47,0,0,0	:
-window	0	2	:zsh	0	:	c8be,190x47,0,0,1	:
-window	0	3	:zsh	0	:-	c8bf,190x47,0,0,2	:
-window	0	4	:pokemon	1	:*	c8c0,190x47,0,0,3	off
-state	0	

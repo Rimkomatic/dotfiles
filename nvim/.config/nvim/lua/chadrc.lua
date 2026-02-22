@@ -7,7 +7,7 @@ local options = {
 		integrations = {},
 		changed_themes = {},
 		transparency = true,
-		theme_toggle = { "hiberbee", "onedark", "one_light" },
+		theme_toggle = { "flouromachine", "onedark", "one_light" },
 	},
 
 	ui = {

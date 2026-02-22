@@ -19,6 +19,7 @@ return {
 			local actions = require("telescope.actions")
 
 			require("telescope").setup({
+
 				defaults = {
 					prompt_title = "Find Files ",
 					prompt_prefix = "  󱐋 ",
@@ -40,6 +41,10 @@ return {
 					mappings = {
 						i = {
 							["<esc>"] = actions.close,
+							["<C-v>"] = actions.select_vertical,
+						},
+						n = {
+							["<C-v>"] = actions.select_vertical,
 						},
 					},
 				},
@@ -116,4 +121,3 @@ return {
 		end,
 	},
 }
-
