@@ -11,6 +11,7 @@ return {
 	config = function()
 		require("live-server").setup({
 			liveserver_args = {},
+			cmd = { "LivePreview", "LivePreviewStart" },
 			integration = {
 				lualine = {
 					supported_filetypes = { "html", "css", "javascript", "javascriptreact" },

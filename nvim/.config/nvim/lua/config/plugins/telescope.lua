@@ -1,12 +1,14 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
+        cmd = "Telescope",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			{ "echasnovski/nvim-web-devicons", lazy = true },
 			{
 				"nvim-telescope/telescope-frecency.nvim",
+                cmd = "Telescope",
 				version = "*",
 				config = function()
 					require("telescope").load_extension("frecency")
@@ -101,6 +103,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
+        event = "VeryLazy",
 		config = function()
 			require("telescope").setup({
 				extensions = {

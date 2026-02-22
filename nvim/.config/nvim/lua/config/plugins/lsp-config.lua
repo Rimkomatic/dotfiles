@@ -1,6 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
+		cmd = "Mason",
 		config = function()
 			require("mason").setup()
 		end,
@@ -8,6 +9,7 @@ return {
 
 	{
 		"williamboman/mason-lspconfig.nvim",
+		event = "BufReadPre",
 		dependencies = { "mason.nvim" },
 		config = function()
 			require("mason-lspconfig").setup({
@@ -37,5 +39,30 @@ return {
 				},
 			},
 		},
+		config = function()
+			-- Lua
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							checkThirdParty = false,
+						},
+					},
+				},
+			})
+
+			-- enable servers
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("clangd")
+			vim.lsp.enable("gopls")
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("html")
+			vim.lsp.enable("cssls")
+			vim.lsp.enable("eslint")
+			vim.lsp.enable("emmet_ls")
+		end,
 	},
 }

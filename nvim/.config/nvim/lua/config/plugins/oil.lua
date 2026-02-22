@@ -2,6 +2,7 @@ return {
 	{
 		"stevearc/oil.nvim",
 		opts = {},
+		cmd = "Oil",
 		dependencies = { { "echasnovski/nvim-web-devicons", opts = {} } },
 		config = function()
 			require("oil").setup({

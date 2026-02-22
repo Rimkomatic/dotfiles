@@ -39,7 +39,7 @@ return {
 					enabled = false,
 				},
 				menu = {
-					-- border = "none",
+					border = "single",
 					scrollbar = false,
 
 					draw = {
