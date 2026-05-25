@@ -145,3 +145,5 @@ eval "$(starship init zsh)"
 
 
 fastfetch --config examples/13
+
+export PATH=$PATH:/home/rik/.spicetify
