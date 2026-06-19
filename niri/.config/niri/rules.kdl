@@ -1,6 +1,4 @@
-// Apply blur to your application windows
 window-rule {
-    // You can add `match` directives here to only blur specific apps (e.g., match app-id="Alacritty")
     background-effect {
         blur true
         xray false
@@ -11,22 +9,6 @@ window-rule {
     match app-id="smile"
     open-floating true
 }
-
-// window-rule {
-//     // This regular expression is intentionally made as specific as possible,
-//     // since this is the default config, and we want no false positives.
-//     // You can get away with just app-id="wezterm" if you want.
-//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
-//     default-column-width {}
-// }
-
-// window-rule {
-//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-//     block-out-from "screen-capture"
-//     // Use this instead if you want them visible on third-party screenshot tools.
-//     // block-out-from "screencast"
-// }
 
 window-rule {
     geometry-corner-radius 5
@@ -41,14 +23,41 @@ window-rule {
 }
 
 window-rule {
-    match app-id="spotify"
-    match app-id="dolphin"
-    // open-fullscreen true 
+    match app-id="^helium$"
+    match app-id="^Spotify$"
+    match app-id="^org.kde.dolphin$"
+    match app-id=r#"^vesktop$"#
     open-maximized true 
 }
 
 window-rule {
+    match title=r#"^Steam Big Picture Mode$"#
+    open-fullscreen true 
+}
+
+window-rule {
+    match title=r#"^Picture-in-Picture$"#
+
+    open-floating true
+    open-maximized false
+}
+
+
+window-rule {
+    match app-id="xdg-desktop-portal-gtk"
+    open-floating true
+    min-width 1100
+    max-width 1300
+    min-height 700
+    max-height 700
+}
+
+
+window-rule {
     match app-id="kcalc"
+    match app-id="nm-connection-editor"
+    match app-id="blueman-manager"
+    match app-id="org.pulseaudio.pavucontrol"
     open-floating true
     min-width 600
     max-width 600
@@ -59,4 +68,12 @@ window-rule {
 layer-rule {
   match namespace="^noctalia-overview*"
   place-within-backdrop true
+}
+
+
+
+window-rule {
+    match app-id="(?i)satty" 
+    
+    open-floating true
 }

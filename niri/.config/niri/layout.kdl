@@ -1,9 +1,14 @@
 blur {
     on
-    passes 5      // number of times to apply the blur effect (default: 3)
+    passes 4      // number of times to apply the blur effect (default: 3)
     offset 1.0    // sample distance per pass (acts as your radius) (default: 3.0)
     noise 0       // add grain to the blur (default: 0.02)
-    // saturation 1.5 // optional: boost color saturation
+    saturation 2 // optional: boost color saturation
+}
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 2500
 }
 
 layout {
@@ -11,33 +16,27 @@ layout {
     // fullscreen {
     //     gaps 1 
     // }
-    center-focused-column "always"
+    center-focused-column "on-overflow"
 
     preset-column-widths {
-        proportion 0.25
+        proportion 0.33
         proportion 0.5
-        proportion 0.75
+        proportion 0.66
+        proportion 0.8
     }
 
-    default-column-width { proportion 0.9; }
+    default-column-width { proportion 1.0; }
     
     focus-ring {
-        // on 
         width 1
-        active-color "#7fc8ff00"
-        inactive-color "#50505000"
     }
 
     border {
         off
         width 0
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
     }
 
     shadow {
-        // on
         softness 30
         spread 5
         offset x=0 y=5

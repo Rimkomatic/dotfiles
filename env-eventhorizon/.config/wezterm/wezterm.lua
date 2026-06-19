@@ -19,7 +19,8 @@ config.default_cursor_style = "SteadyBlock"
 config.cursor_blink_ease_out = "Constant"
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_rate = 0
-config.color_scheme = "Argonaut"
+config.color_scheme = "Noctalia"
+-- config.color_scheme = "xen"
 config.font = wezterm.font_with_fallback({
   "JetBrainsMono Nerd Font",
   "Fira Code",
@@ -30,14 +31,6 @@ config.colors = {
   cursor_fg = "black",
 }
 
--- config.keys = {
---   {
---     key = "V",
---     mods = "CTRL|SHIFT",
---     action = wezterm.action.PasteFrom("Clipboard"),
---   },
--- }
--- Background with blur
 config.background = {
   {
     source = {
@@ -46,12 +39,38 @@ config.background = {
     width = "100%",
     height = "100%",
     opacity =0.65
-    -- blur = 20.0, -- Adjust between 10–30 for subtle to heavy blur
   },
 }
 
--- Optional: overall window transparency
--- config.window_background_opacity = 0.8
+config.keys = {
+    {
+      key = "d",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
+    },
+    {
+      key = "d",
+      mods = "CTRL|ALT",
+      action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
+    },
+
+    {
+      key = "t",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+    },
+  }
+
+  config.colors={
+      -- selection_bg = "#d70022",
+      -- selection_fg = "#000000",
+
+      cursor_bg = "#d70022",
+      cursor_fg = "#000000",
+      cursor_border = "#d70022",
+  }
+
+
 
 return config
 

@@ -1,0 +1,35 @@
+[colors]
+foreground = "#F1E9DA"
+background = "#171427"
+
+cursor_bg = "#FFD400"
+cursor_border = "#FFD400"
+cursor_fg = "#ff0000"
+
+selection_bg = "#D90368"
+selection_fg = "#F1E9DA"
+
+ansi = [
+    "#171427", # black
+    "#D90368", # red
+    "#541388", # green -> purple
+    "#FFD400", # yellow
+    "#6D5BD0", # blue
+    "#8B2BE2", # magenta
+    "#D90368", # cyan -> pink
+    "#F1E9DA", # white
+]
+
+brights = [
+    "#4A456A", # bright black
+    "#FF4A8D", # bright red
+    "#8B2BE2", # bright green replacement
+    "#FFE45C", # bright yellow
+    "#A79AFF", # bright blue
+    "#C44CFF", # bright magenta
+    "#FF6AA9", # bright cyan replacement
+    "#FFFFFF", # bright white
+]
+
+[metadata]
+name = "xen"

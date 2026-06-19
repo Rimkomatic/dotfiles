@@ -37,68 +37,68 @@ return {
 			dashboard = {
 				enabled = true,
 				preset = {
-        keys = {
-          {
-            icon = " ",
-            key = "f",
-            desc = "Find File",
-            action = function()
-              require("telescope.builtin").find_files()
-            end,
-          },
-          {
-            icon = " ",
-            key = "n",
-            desc = "New File",
-            action = ":ene | startinsert",
-          },
-          {
-            icon = " ",
-            key = "g",
-            desc = "Find Text",
-            action = function()
-              require("telescope.builtin").live_grep()
-            end,
-          },
-          {
-            icon = " ",
-            key = "r",
-            desc = "Recent Files",
-            action = function()
-              require("telescope.builtin").oldfiles()
-            end,
-          },
-          {
-            icon = " ",
-            key = "c",
-            desc = "Config",
-            action = function()
-              require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
-            end,
-          },
-          {
-            icon = " ",
-            key = "x",
-            desc = "Restore Session",
-            action = function()
-              require("mini.sessions").select()
-            end,
-          },
-          {
-            icon = "󰒲 ",
-            key = "L",
-            desc = "Lazy",
-            action = ":Lazy",
-            enabled = package.loaded.lazy ~= nil,
-          },
-          {
-            icon = " ",
-            key = "q",
-            desc = "Quit",
-            action = ":qa",
-          },
-        },
-        header = [[
+					keys = {
+						{
+							icon = " ",
+							key = "f",
+							desc = "Find File",
+							action = function()
+								require("telescope.builtin").find_files()
+							end,
+						},
+						{
+							icon = " ",
+							key = "n",
+							desc = "New File",
+							action = ":ene | startinsert",
+						},
+						{
+							icon = " ",
+							key = "g",
+							desc = "Find Text",
+							action = function()
+								require("telescope.builtin").live_grep()
+							end,
+						},
+						{
+							icon = " ",
+							key = "r",
+							desc = "Recent Files",
+							action = function()
+								require("telescope.builtin").oldfiles()
+							end,
+						},
+						{
+							icon = " ",
+							key = "c",
+							desc = "Config",
+							action = function()
+								require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+							end,
+						},
+						{
+							icon = " ",
+							key = "x",
+							desc = "Restore Session",
+							action = function()
+								require("mini.sessions").select()
+							end,
+						},
+						{
+							icon = "󰒲 ",
+							key = "L",
+							desc = "Lazy",
+							action = ":Lazy",
+							enabled = package.loaded.lazy ~= nil,
+						},
+						{
+							icon = " ",
+							key = "q",
+							desc = "Quit",
+							action = ":qa",
+						},
+					},
+					header = [[
         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⠤⠄⣀⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠒⠁⠀⠠⣶⣿⣿⣿⣿⢿⡶⣶⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  
         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠟⠛⠓⠆⠙⠁⠉⠀⠀⠀⠀⠐⠸⣾⠿⡦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

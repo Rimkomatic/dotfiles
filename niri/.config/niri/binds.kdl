@@ -8,10 +8,18 @@ binds {
     Mod+Ctrl+Return hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh " ~/.config/rofi/launchers/type-6/launcher.sh"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+z  { spawn "zen-browser"; }
+    Mod+h  { spawn "helium-browser"; }
     Mod+d  { spawn "dolphin"; }
-    // ~/.config/custom/scripts
+    Mod+Shift+V  { spawn "vesktop"; }
+    
+    
+    Mod+Shift+P  { spawn-sh "/home/rik/.config/rofi/project-manager-rofi.sh"; }
+
     Mod+v { spawn-sh "cliphist list | rofi -dmenu -theme /home/rik/.config/rofi/launchers/type-1/style-3.rasi -display-columns 2 -p '   Clipboard' | cliphist decode | wl-copy"; }
-    Mod+Shift+S { spawn "~/.config/niri/scripts/screenshot.sh"; }
+    // Mod+Shift+S { spawn "~/.config/niri/scripts/screenshot.sh"; }
+    
+    Mod+S { spawn-sh "grim -g \"$(slurp)\" - | wl-copy"; }
+    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H%M%S').png"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -75,7 +83,7 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
     Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
+    Mod+2 { focus-workspace "2"; }
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
     Mod+5 { focus-workspace 5; }
@@ -84,7 +92,7 @@ binds {
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
     Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+2 { move-column-to-workspace "2"; }
     Mod+Shift+3 { move-column-to-workspace 3; }
     Mod+Shift+4 { move-column-to-workspace 4; }
     Mod+Shift+5 { move-column-to-workspace 5; }
@@ -124,10 +132,4 @@ binds {
     // Ctrl+Print { screenshot-screen; }
     // Alt+Print { screenshot-window; }
 
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
-
-    Mod+Shift+P { power-off-monitors; }
 }

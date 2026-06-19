@@ -1,9 +1,4 @@
 vim.g.base46_cache = vim.fn.stdpath("data") .. "/base46_cache/"
-
-require("config.lazy")
-require("chadrc")
-require("colors")
-require("keymap")
 --require("/hime/rik/.config/nvim/plugin/floaterminal")
 
 vim.opt.expandtab = true
@@ -81,3 +76,10 @@ vim.diagnostic.config({
 	underline = false,
 	update_in_insert = true,
 })
+
+
+
+require("config.lazy")
+require("chadrc")
+require("colors")
+require("keymap")

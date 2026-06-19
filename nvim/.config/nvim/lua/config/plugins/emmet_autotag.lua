@@ -1,24 +1,24 @@
-return{
-  {
-    "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
-  },
+return {
+	{
+		"windwp/nvim-ts-autotag",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 
-  -- Emmet-like expansion (div>ul>li*3 etc.)
-  {
-    "mattn/emmet-vim",
-    ft = { "html", "css", "javascript", "typescriptreact", "javascriptreact" },
-    init = function()
-      vim.g.user_emmet_leader_key = "<C-Z>"
-    end,
-  },
+	-- Emmet-like expansion (div>ul>li*3 etc.)
+	{
+		"mattn/emmet-vim",
+		ft = { "html", "css", "javascript", "typescriptreact", "javascriptreact" },
+		init = function()
+			vim.g.user_emmet_leader_key = "<C-Z>"
+		end,
+	},
 
-  -- Optional: auto close unmatched HTML tags
-  {
-    "alvan/vim-closetag",
-    ft = { "html", "xhtml", "javascriptreact", "typescriptreact" },
-    init = function()
-      vim.g.closetag_filenames = "*.html,*.xhtml,*.jsx,*.tsx"
-    end,
-  },
-} 
+	-- Optional: auto close unmatched HTML tags
+	{
+		"alvan/vim-closetag",
+		ft = { "html", "xhtml", "javascriptreact", "typescriptreact" },
+		init = function()
+			vim.g.closetag_filenames = "*.html,*.xhtml,*.jsx,*.tsx"
+		end,
+	},
+}

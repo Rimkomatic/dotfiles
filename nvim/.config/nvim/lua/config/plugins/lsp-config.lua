@@ -9,7 +9,7 @@ return {
 
 	{
 		"williamboman/mason-lspconfig.nvim",
-		event = "BufReadPre",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = { "mason.nvim" },
 		config = function()
 			require("mason-lspconfig").setup({
@@ -54,6 +54,10 @@ return {
 				},
 			})
 
+			vim.lsp.config("qmlls", {
+				cmd = { "/usr/bin/qmlls6" },
+			})
+
 			-- enable servers
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("clangd")
@@ -63,6 +67,7 @@ return {
 			vim.lsp.enable("cssls")
 			vim.lsp.enable("eslint")
 			vim.lsp.enable("emmet_ls")
+			vim.lsp.enable("qmlls")
 		end,
 	},
 }

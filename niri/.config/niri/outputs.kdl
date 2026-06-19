@@ -4,6 +4,7 @@ output "HDMI-A-2" {
     // backdrop-color "#000"
     transform "normal"
     position x=1280 y=0
+    max-bpc 16
 }
 
 output "eDP-1" {

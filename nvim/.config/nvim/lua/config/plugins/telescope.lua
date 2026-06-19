@@ -1,14 +1,14 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-        cmd = "Telescope",
+		cmd = "Telescope",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			{ "echasnovski/nvim-web-devicons", lazy = true },
 			{
 				"nvim-telescope/telescope-frecency.nvim",
-                cmd = "Telescope",
+				cmd = "Telescope",
 				version = "*",
 				config = function()
 					require("telescope").load_extension("frecency")
@@ -79,7 +79,11 @@ return {
 				require("telescope.builtin").help_tags({ prompt_title = "Help Tags " })
 			end)
 
-			vim.keymap.set("n", "<leader>ff", "<cmd>Telescope frecency workspace=CWD<cr>", { desc = "Find Files " })
+			vim.keymap.set("n", "<leader>ff", function()
+				vim.defer_fn(function()
+					require("telescope").extensions.frecency.frecency({ workspace = "CWD" })
+				end, 50)
+			end, { desc = "Find Files " })
 
 			vim.keymap.set("n", "<leader>fc", function()
 				require("telescope.builtin").find_files({
@@ -108,12 +112,15 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
-        event = "VeryLazy",
+		event = "VeryLazy",
 		config = function()
 			require("telescope").setup({
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown({}),
+					},
+					frecency = {
+						show_unindexed = false,
 					},
 				},
 			})

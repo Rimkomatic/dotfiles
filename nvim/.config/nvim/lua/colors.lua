@@ -18,7 +18,7 @@ hl(0, "WhichKeyFloat", { bg = "none" })
 
 -- Telescope
 hl(0, "TelescopeBorder", { bg = "none" })
-hl(0, "TelescopePromptTitle", { bg = "none" })
+-- hl(0, "TelescopePromptTitle", { bg = "none" })
 hl(0, "TelescopePromptBorder", { bg = "none" })
 hl(0, "TelescopeNormal", { bg = "none" })
 
@@ -67,10 +67,10 @@ hl(0, "Search", { fg = "red" })
 hl(0, "IncSearch", { fg = "red" })
 
 -- Pmenu
-hl(0, "Pmenu", { bg = "none" })
-hl(0, "PmenuSel", { bg = "none" })
-hl(0, "PmenuSbar", { bg = "none" })
-hl(0, "PmenuThumb", { bg = "none" })
+-- hl(0, "Pmenu", { bg = "none" })
+-- hl(0, "PmenuSel", { bg = "none" })
+-- hl(0, "PmenuSbar", { bg = "none" })
+-- hl(0, "PmenuThumb", { bg = "none" })
 
 -- Notifications
 hl(0, "NotifyINFOBody", { bg = "none" })
@@ -89,9 +89,9 @@ hl(0, "NotifyBackground", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#393939" }) -- Inactive line numbers
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff" })
 
-vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#000000", bg = "#DB2B72", bold = true })
-vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "#000000", bg = "#30A1EC", bold = true })
-vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { fg = "#000000", bg = "#12D368", bold = true })
+-- vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#000000", bg = "#DB2B72", bold = true })
+-- vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "#000000", bg = "#30A1EC", bold = true })
+-- vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { fg = "#000000", bg = "#12D368", bold = true })
 -- vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#45475a", bg = "none" })
 -- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 
@@ -100,7 +100,7 @@ vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#393939", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#393939", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#393939", bg = "NONE" })
 
-vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#000000", bg = "#DB2B72", bold = true })
+-- vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#000000", bg = "#DB2B72", bold = true })
 
 -- Set a custom blue color in Ayu Dark theme
 -- vim.cmd [[
@@ -145,11 +145,10 @@ vim.api.nvim_set_hl(0, "PmenuSel", {
 })
 
 -- Optional: Ensure the base menu has a background too
-vim.api.nvim_set_hl(0, "Pmenu", {
-	fg = "#CDD6F4", -- Choose a suitable foreground text color
-	bg = "#1E1E2E", -- Choose a base background color (e.g., Catppuccin Mocha Base)
-})
-
+-- vim.api.nvim_set_hl(0, "Pmenu", {
+-- 	fg = "#CDD6F4", -- Choose a suitable foreground text color
+-- 	bg = "#1E1E2E", -- Choose a base background color (e.g., Catppuccin Mocha Base)
+-- })
 
 vim.api.nvim_set_hl(0, "Comment", { italic = true })
 vim.api.nvim_set_hl(0, "@variable.builtin", { italic = true })
