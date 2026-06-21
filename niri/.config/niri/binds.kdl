@@ -10,9 +10,13 @@ binds {
     Mod+z  { spawn "zen-browser"; }
     Mod+h  { spawn "helium-browser"; }
     Mod+d  { spawn "dolphin"; }
+    Mod+W { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Mod+Shift+V  { spawn "vesktop"; }
-    
-    
+    Mod+L { spawn "hyprlock"; }
+   
+
+    Mod+k { spawn "walker"; }
+
     Mod+Shift+P  { spawn-sh "/home/rik/.config/rofi/project-manager-rofi.sh"; }
 
     Mod+v { spawn-sh "cliphist list | rofi -dmenu -theme /home/rik/.config/rofi/launchers/type-1/style-3.rasi -display-columns 2 -p '   Clipboard' | cliphist decode | wl-copy"; }
@@ -55,17 +59,7 @@ binds {
 
     Mod+Down      { focus-workspace-down; }
     Mod+Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
 
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
@@ -125,11 +119,5 @@ binds {
 
     Mod+T       { toggle-window-floating; }
     Mod+Shift+T { switch-focus-between-floating-and-tiling; }
-
-    Mod+W { toggle-column-tabbed-display; }
-
-    // Print { screenshot; }
-    // Ctrl+Print { screenshot-screen; }
-    // Alt+Print { screenshot-window; }
 
 }

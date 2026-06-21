@@ -8,13 +8,13 @@ ROFI_THEME="/home/rik/.config/rofi/launchers/type-1/style-3.rasi"
 ROFI_CMD="rofi -dmenu -i -theme $ROFI_THEME"
 
 # Define the main menu options
-OPTIONS="🚀 Load Project\n📝 New Project\n🗑️ Delete Project"
+OPTIONS="Load Project\nNew Project\nDelete Project"
 
 # 1. Show the main Rofi menu
 CHOICE=$(echo -e "$OPTIONS" | $ROFI_CMD -p "Project Manager")
 
 case "$CHOICE" in
-    "🚀 Load Project")
+    "Load Project")
         SESSIONS=$("$MANAGER_SCRIPT" list)
         
         if [ -z "$SESSIONS" ]; then
@@ -25,20 +25,20 @@ case "$CHOICE" in
         TARGET=$(echo "$SESSIONS" | $ROFI_CMD -p "Load")
         
         if [ -n "$TARGET" ]; then
-            wezterm start --always-new-process -- bash -c "$MANAGER_SCRIPT load '$TARGET'"
+            wezterm start --always-new-process -- "$MANAGER_SCRIPT" load "$TARGET"
         fi
         ;;
         
-    "📝 New Project")
+    "New Project")
         # Passing an empty string gives a clean prompt for typing a new name
         TARGET=$(echo "" | $ROFI_CMD -p "New Name")
         
         if [ -n "$TARGET" ]; then
-            wezterm start --always-new-process -- bash -c "$MANAGER_SCRIPT new '$TARGET'"
+            wezterm start --always-new-process -- "$MANAGER_SCRIPT" new "$TARGET"
         fi
         ;;
         
-    "🗑️ Delete Project")
+    "Delete Project")
         SESSIONS=$("$MANAGER_SCRIPT" list)
         
         if [ -z "$SESSIONS" ]; then

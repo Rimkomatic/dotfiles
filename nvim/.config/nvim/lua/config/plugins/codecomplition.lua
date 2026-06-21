@@ -60,6 +60,17 @@ return {
 							},
 						})
 					end,
+					
+                    deepseek_r1 = function()
+						return require("codecompanion.adapters").extend("ollama", {
+							name = "deepseek-r1",
+							schema = {
+								model = {
+									default = "deepseek-r1:14b",
+								},
+							},
+						})
+					end,
 				},
 			},
 

@@ -16,7 +16,7 @@
         "enableWindowsSearch": true,
         "iconMode": "tabler",
         "ignoreMouseInput": false,
-        "overviewLayer": false,
+        "overviewLayer": true,
         "pinnedApps": [
         ],
         "position": "center",
@@ -149,6 +149,16 @@
                     "showText": true,
                     "textColor": "none",
                     "useFixedWidth": false
+                },
+                {
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "rocket",
+                    "iconColor": "none",
+                    "id": "Launcher",
+                    "useDistroLogo": false
                 }
             ],
             "right": [
@@ -478,7 +488,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 0.59,
+        "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -637,9 +647,13 @@
             {
                 "enabled": true,
                 "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "spicetify"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,

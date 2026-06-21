@@ -89,17 +89,6 @@ alias mountdisk="sudo mount -t ntfs-3g /dev/sda1 /mnt/external_drive"
 alias please='sudo'
 alias matrix="cmatrix -b -u 2"
 
-# XAMPP STuff
-
-# DOCKER oracle
-alias oracle-start='sudo docker start -ai oracle23ai'
-alias oracle-stop='sudo docker stop oracle23ai'
-alias oracle-status="sudo docker ps --filter 'name=oracle23ai'"
-alias oracle-logs='sudo docker logs -f oracle23ai'
-
-# Docker mysql
-alias mysql-start='docker start mysql8'
-alias mysql-stop='docker stop mysql8'
 
 # Fzf functions
 nvim-fzf() {
@@ -132,7 +121,7 @@ function y() {
 # EDIT Command
 autoload -z edit-command-line
 zle -N edit-command-line
-bindkey "^x^e" edit-command-line
+bindkey "^e^d" edit-command-line
 
 # The Fuck 
 eval $(thefuck --alias)
