@@ -1,0 +1,19 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+// Modular configurations
+include "./startup.kdl"
+include "./workspace.kdl"
+include "./input.kdl"
+include "./outputs.kdl"
+include "./layout.kdl"
+include "./rules.kdl"
+include "./binds.kdl"
+include "./recentwindow.kdl"
+
+// Existing custom include
+include "./noctalia.kdl"

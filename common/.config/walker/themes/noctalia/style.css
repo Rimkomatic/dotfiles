@@ -1,0 +1,155 @@
+/* Crimson, Black & White Palette */
+@define-color surface #0a0a0a;         /* Deep black background */
+@define-color surfaceVariant #171717;  /* Slightly lighter black for search bar */
+@define-color onSurface #ffffff;       /* Pure white text */
+@define-color onSurfaceVariant #a3a3a3;/* Dimmed white for subtext */
+@define-color primary #dc143c;         /* Crimson accent */
+@define-color secondary #ff3366;       /* Vibrant red/crimson for quick keys */
+@define-color error #ff0000;           /* Red error */
+@define-color outline #262626;         /* Subtle dark gray outline */
+
+* {
+  all: unset;
+}
+
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+/* Main window container */
+.box-wrapper {
+  background: @surface;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid @outline;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Darker shadow for black UI */
+}
+
+/* Inner layout container */
+.box {
+  padding: 0px;
+  border-radius: 14px;
+}
+
+/* Search bar wrapper */
+.search-container {
+  background: @surfaceVariant;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.input placeholder {
+  opacity: 0.4;
+  color: @onSurface;
+}
+
+/* Input text field */
+.input {
+  color: @onSurface;
+  caret-color: @primary;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+.list {
+  color: @onSurface;
+}
+
+/* List rows */
+.item-box {
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+/* Crimson highlight strip when navigating */
+child:hover .item-box,
+child:selected .item-box {
+  background: alpha(@primary, 0.25); /* 25% transparent crimson */
+  border-left: 2px solid @primary;   /* Adds a sharp crimson edge to selected items */
+}
+
+.item-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item-subtext {
+  font-size: 11px;
+  opacity: 0.6;
+  color: @onSurfaceVariant;
+}
+
+.item-quick-activation {
+  background: @secondary;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Hide clutter */
+.keybinds-wrapper,
+.scrollbar {
+  display: none;
+}
+
+/* Calculator specific overrides */
+.calc .item-text {
+  font-size: 20px;
+  color: @primary;
+}
+
+/* Error message styling */
+.error {
+  padding: 10px;
+  background: @error;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+
+/* .keybinds-wrapper, */
+/* .scrollbar, */
+/* .clipboard .item-subtext, */
+/* .clipboard image { */
+/*   opacity: 0; */
+/*   min-height: 0; */
+/*   min-width: 0; */
+/*   padding: 0; */
+/*   margin: 0; */
+/*   font-size: 0; */
+/* } */
+
+
+/* 1. Fix the massive empty space by forcing the scroll area to hug the content */
+.scroll, .list {
+  min-height: 0;
+}
+
+/* 2. Hide the F1/F2/F3 Quick Activation badges completely */
+.item-quick-activation {
+  opacity: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+/* 3. A sleeker, sharper selection state */
+child:hover .item-box,
+child:selected .item-box {
+  background: @surfaceVariant;       /* Uses the subtle dark gray instead of a washed-out red */
+  /* border-left: 3px solid @primary;   /* Slightly thicker, sharper crimson edge */ */
+  border-radius: 6px;
+}

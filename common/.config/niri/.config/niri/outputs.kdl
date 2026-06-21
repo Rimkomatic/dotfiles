@@ -1,0 +1,16 @@
+output "HDMI-A-2" {
+    mode "1920x1080@100"
+    scale 1.0
+    // backdrop-color "#000"
+    transform "normal"
+    position x=1280 y=0
+    max-bpc 16
+}
+
+output "eDP-1" {
+    mode "1920x1080@60.001"
+    scale 1
+    // backdrop-color "#000"
+    transform "normal"
+    position x=1280 y=0
+}

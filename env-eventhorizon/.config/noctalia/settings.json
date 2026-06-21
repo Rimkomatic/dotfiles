@@ -159,6 +159,12 @@
                     "iconColor": "none",
                     "id": "Launcher",
                     "useDistroLogo": false
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "VPN",
+                    "textColor": "none"
                 }
             ],
             "right": [

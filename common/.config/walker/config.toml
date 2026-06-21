@@ -1,0 +1,52 @@
+# General Settings
+terminal = "wezterm"  
+theme = "noctalia"    
+hotreload_theme = true 
+
+[ui]
+width = 500              # Keeps the window from being overly wide
+show_initial_entries = true # Shows apps immediately before you start typing
+
+[ui.window]
+box_layout = "vertical"  # Standard top-to-bottom layout
+
+[search]
+delay = 0                # Instant search, zero lag
+placeholder = ""         # Removes the "Search..." text for maximum minimalism
+
+
+[builtins.applications]
+weight = 100             # Keeps apps at the very top of search results
+show_generic = true      # Shows generic app names
+hide_actions_with_empty_query = true
+
+[builtins.runner]
+weight = 90
+
+[builtins.clipboard]
+max_entries = 50         # Keeps your history clean and memory usage low
+image_height = 200       # Allows you to see preview blocks of copied images
+
+
+[[providers.prefixes]]
+prefix = ":"
+provider = "clipboard"          # Clipboard history
+
+[[providers.prefixes]]
+prefix = "+"
+provider = "vpnselector"
+
+[providers]
+default = ["desktopapplications", "runner" , "vpnselector"]
+# empty = ["desktopapplications"]
+
+[providers.clipboard]
+time_format = "%d.%m. - %H:%M"  # strftime format for timestamps
+
+
+
+
+# [[plugins]]
+# name = "vpnselector"
+# src = "bash /home/rik/.config/custom/launcher/vpn-connector.sh"
+# prefix = "+"
